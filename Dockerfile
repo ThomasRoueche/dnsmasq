@@ -1,7 +1,7 @@
+FROM alpine:edge
+
 LABEL   version="1.0" \
         description="DNSMasq for homelab with conf in local storage"
-
-FROM alpine:edge
 
 # webproc release settings
 #ENV WEBPROC_VERSION 0.1.9
