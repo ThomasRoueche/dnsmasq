@@ -19,7 +19,8 @@ RUN apk update \
 #configure dnsmasq
 RUN mkdir -p /etc/default/
 RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
-COPY /Volumes/Data/Docker/Dockerfile/dnsmasq/dnsmasq.conf /etc/dnsmasq.conf
+#COPY /Volumes/Data/Docker/Dockerfile/dnsmasq/dnsmasq.conf /etc/dnsmasq.conf
+COPY dnsmasq.conf /etc/dnsmasq.conf
 
 #configure docker for dnsmas (don't forget to use docker run -p <your ports> or -P)
 EXPOSE 53:53/udp
