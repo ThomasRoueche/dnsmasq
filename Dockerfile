@@ -27,4 +27,5 @@ EXPOSE 53:53/udp
 
 #run!
 #ENTRYPOINT ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
-ENTRYPOINT ["dnsmasq","--no-daemon"]
+#ENTRYPOINT ["dnsmasq","--no-daemon"]
+ENTRYPOINT ["dnsmasq","--keep-in-foreground"]
