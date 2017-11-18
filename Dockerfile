@@ -23,7 +23,7 @@ RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
 COPY dnsmasq.conf /etc/dnsmasq.conf
 
 #configure docker for dnsmas (don't forget to use docker run -p <your ports> or -P)
-EXPOSE 53:53/udp
+EXPOSE 53 53/udp
 
 #run!
 #ENTRYPOINT ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
